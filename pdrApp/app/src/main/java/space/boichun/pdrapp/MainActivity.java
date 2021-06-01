@@ -13,6 +13,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private long backPressedTime;
+    private Toast backToast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,10 +53,12 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed(){
 
         if (backPressedTime + 2000 > System.currentTimeMillis()){
+            backToast.cancel();
             super.onBackPressed();
             return;
         }else{
-            Toast.makeText(getBaseContext(),"Натисніть двічі, щоб вийти", Toast.LENGTH_SHORT).show();
+            backToast = Toast.makeText(getBaseContext(),"Натисніть двічі, щоб вийти", Toast.LENGTH_SHORT);
+            backToast.show();
         }
         backPressedTime = System.currentTimeMillis();
     }

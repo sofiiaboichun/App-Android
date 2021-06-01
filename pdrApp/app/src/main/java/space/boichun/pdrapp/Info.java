@@ -31,4 +31,13 @@ public class Info extends AppCompatActivity {
             }
         });
     }
+
+    public void onBackPressed(){
+        try{
+            Intent intent = new Intent(Info.this,MainActivity.class);
+            startActivity(intent);finish();
+        }catch (Exception e) {
+        }
+    }
+
 }

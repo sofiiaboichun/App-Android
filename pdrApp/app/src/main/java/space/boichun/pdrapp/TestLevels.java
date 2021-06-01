@@ -31,4 +31,13 @@ public class TestLevels extends AppCompatActivity {
             }
         });
     }
+
+    public void onBackPressed(){
+        try{
+            Intent intent = new Intent(TestLevels.this,MainActivity.class);
+            startActivity(intent);finish();
+        }catch (Exception e) {
+        }
+    }
+
 }

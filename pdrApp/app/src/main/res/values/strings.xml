@@ -3,4 +3,9 @@
     <string name="Hello">Привіт, Вчимо ПДР разом!</string>
     <string name="Start">До тестів</string>
     <string name="btnInfo">ПДР інформація</string>
+    <string name="backtoMenu">Меню</string>
+    <string name="level1">Легкі</string>
+    <string name="level2">Середні</string>
+    <string name="level3">Складні</string>
+    <string name="level4">Змішані</string>
 </resources>

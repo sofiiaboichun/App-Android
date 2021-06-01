@@ -29,6 +29,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button button1 = (Button)findViewById(R.id.button_info);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try{
+                    Intent intent1 = new Intent(MainActivity.this,Info.class);
+                    startActivity(intent1);finish();
+                } catch (Exception e) {
+
+                }
+            }
+        });
+
         Window w = getWindow();
         w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }

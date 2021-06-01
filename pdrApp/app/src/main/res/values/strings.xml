@@ -8,4 +8,6 @@
     <string name="level2">Середні</string>
     <string name="level3">Складні</string>
     <string name="level4">Змішані</string>
+    <string name="pdrInfo">Правила дорожнього руху 2021</string>
+    <string name="info1">Більше</string>
 </resources>

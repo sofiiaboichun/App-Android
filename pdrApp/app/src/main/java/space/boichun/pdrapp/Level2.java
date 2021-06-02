@@ -3,7 +3,6 @@ package space.boichun.pdrapp;
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.drawable.Animatable;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -20,10 +19,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
 
-public class Level1 extends AppCompatActivity {
+public class Level2 extends AppCompatActivity {
 
     Dialog dialog;
-    Dialog dialogEnd;
     public int numLeft;
     public int numRight;
     Array array = new Array();
@@ -52,7 +50,7 @@ public class Level1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try{
-                    Intent intent = new Intent(Level1.this,MainActivity.class);
+                    Intent intent = new Intent(Level2.this,MainActivity.class);
                     startActivity(intent);finish();
                 }catch (Exception e) {
                 }
@@ -73,7 +71,7 @@ public class Level1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try{
-                    Intent intent = new Intent(Level1.this,TestLevels.class);
+                    Intent intent = new Intent(Level2.this,TestLevels.class);
                     startActivity(intent);finish();
                 }catch (Exception e) {
                 }
@@ -92,45 +90,6 @@ public class Level1 extends AppCompatActivity {
 
         dialog.show();
 
-        //new dialog
-
-        dialogEnd = new Dialog(this);
-        dialogEnd.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialogEnd.setContentView(R.layout.testenddialog);
-        dialogEnd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        dialogEnd.setCancelable(false);
-
-        TextView btnclose1 = (TextView)dialog.findViewById(R.id.btnclose);
-        btnclose1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try{
-                    Intent intent = new Intent(Level1.this,TestLevels.class);
-                    startActivity(intent);finish();
-                }catch (Exception e) {
-                }
-                dialogEnd.dismiss();
-            }
-        });
-
-        Button btncont1 = (Button) dialogEnd.findViewById(R.id.btncont);
-        btncont1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try{
-                    Intent intent = new Intent(Level1.this,Level2.class);
-                    startActivity(intent);finish();
-                }catch (Exception e) {
-                }
-                dialogEnd.dismiss();
-            }
-        });
-
-
-
-
-        //
-
         final int[] progress = {
                 R.id.point1,
                 R.id.point2,
@@ -144,7 +103,7 @@ public class Level1 extends AppCompatActivity {
                 R.id.point10,
         };
 
-        final Animation a = AnimationUtils.loadAnimation(Level1.this,R.anim.alpha);
+        final Animation a = AnimationUtils.loadAnimation(Level2.this,R.anim.alpha);
 
         numLeft = random.nextInt(10);
         img_left.setImageResource(array.images1[numLeft]);
@@ -165,14 +124,14 @@ public class Level1 extends AppCompatActivity {
 
                 if (event.getAction()==MotionEvent.ACTION_DOWN){
                     img_right.setEnabled(false);
-                    if (array.strong[numLeft]>array.strong[numRight]){
+                    if (numLeft>numRight){
                         img_left.setImageResource(R.drawable.img_true);
                     }else{
                         img_left.setImageResource(R.drawable.img_false);
                     }
                 }else if (event.getAction()==MotionEvent.ACTION_UP){
 
-                    if (array.strong[numLeft]>array.strong[numRight]){
+                    if (numLeft>numRight){
 
                         if (count<10){
                             count=count+1;
@@ -212,11 +171,10 @@ public class Level1 extends AppCompatActivity {
 
                     if (count==10){
 
-                        dialogEnd.show();
-
                     }else{
                         numLeft = random.nextInt(10);
                         img_left.setImageResource(array.images1[numLeft]);
+                        img_left.startAnimation(a);
                         text_left.setText(array.texts1[numLeft]);
 
                         numRight = random.nextInt(10);
@@ -226,6 +184,7 @@ public class Level1 extends AppCompatActivity {
                         }
 
                         img_right.setImageResource(array.images1[numRight]);
+                        img_right.startAnimation(a);
                         text_right.setText(array.texts1[numRight]);
 
                         img_right.setEnabled(true);
@@ -243,14 +202,14 @@ public class Level1 extends AppCompatActivity {
 
                 if (event.getAction()==MotionEvent.ACTION_DOWN){
                     img_left.setEnabled(false);
-                    if (array.strong[numLeft]<array.strong[numRight]){
+                    if (numLeft<numRight){
                         img_right.setImageResource(R.drawable.img_true);
                     }else{
                         img_right.setImageResource(R.drawable.img_false);
                     }
                 }else if (event.getAction()==MotionEvent.ACTION_UP){
 
-                    if (array.strong[numLeft]<array.strong[numRight]){
+                    if (numLeft<numRight){
 
                         if (count<10){
                             count=count+1;
@@ -290,11 +249,10 @@ public class Level1 extends AppCompatActivity {
 
                     if (count==10){
 
-                        dialogEnd.show();
-
                     }else{
                         numLeft = random.nextInt(10);
                         img_left.setImageResource(array.images1[numLeft]);
+                        img_left.startAnimation(a);
                         text_left.setText(array.texts1[numLeft]);
 
                         numRight = random.nextInt(10);
@@ -304,6 +262,7 @@ public class Level1 extends AppCompatActivity {
                         }
 
                         img_right.setImageResource(array.images1[numRight]);
+                        img_right.startAnimation(a);
                         text_right.setText(array.texts1[numRight]);
 
                         img_left.setEnabled(true);
@@ -320,7 +279,7 @@ public class Level1 extends AppCompatActivity {
 
     public void onBackPressed(){
         try{
-            Intent intent = new Intent(Level1.this,TestLevels.class);
+            Intent intent = new Intent(Level2.this,TestLevels.class);
             startActivity(intent);finish();
         }catch (Exception e) {
         }

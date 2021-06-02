@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="lvl1text1">Дати дорогу</string>
+    <string name="lvl1text2">Рух заборонено</string>
+    <string name="lvl1text3">Проїзд без зупинки заборонено</string>
+    <string name="lvl1text4">Рух мех трансп зас заборонено</string>
+    <string name="lvl1text5">Головна дорога</string>
+    <string name="lvl1text6">Рух вантаж авт заборонено</string>
+    <string name="lvl1text7">Кінець головної дороги</string>
+    <string name="lvl1text8">Рух тракторів заборонено</string>
+    <string name="lvl1text9">Перевага зустрічного руху</string>
+    <string name="lvl1text10">Рух на велосипедах заборонено</string>
+
+</resources>

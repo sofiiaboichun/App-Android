@@ -11,5 +11,6 @@
     <string name="pdrInfo">Правила дорожнього руху 2021</string>
     <string name="info1">Більше</string>
     <string name="level">Рівень :</string>
+    <string name="level01">Рівень 1</string>
     <string name="cont">Почати</string>
 </resources>

@@ -12,4 +12,10 @@
     <string name="lvl1text9">Перевага зустрічного руху</string>
     <string name="lvl1text10">Рух на велосипедах заборонено</string>
 
+    <string name="lvl1text11">Нерівна дорога</string>
+    <string name="lvl1text22">Дорожні роботи</string>
+    <string name="lvl1text33">Затори в дорожньому русі</string>
+    <string name="lvl1text44">Вибоїна</string>
+    <string name="lvl1text55">Викид кам’яних матеріалів</string>
+
 </resources>

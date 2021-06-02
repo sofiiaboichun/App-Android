@@ -3,7 +3,6 @@ package space.boichun.pdrapp;
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.drawable.Animatable;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -20,7 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
 
-public class Level2 extends AppCompatActivity {
+public class Level3 extends AppCompatActivity {
 
     Dialog dialog;
     Dialog dialogEnd;
@@ -36,7 +35,7 @@ public class Level2 extends AppCompatActivity {
         setContentView(R.layout.common);
 
         TextView textLevels = findViewById(R.id.textLevels);
-        textLevels.setText(R.string.level02);
+        textLevels.setText(R.string.level03);
 
         final ImageView img_left = (ImageView)findViewById(R.id.img_left);
         img_left.setClipToOutline(true);
@@ -52,7 +51,7 @@ public class Level2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try{
-                    Intent intent = new Intent(Level2.this,MainActivity.class);
+                    Intent intent = new Intent(Level3.this,MainActivity.class);
                     startActivity(intent);finish();
                 }catch (Exception e) {
                 }
@@ -73,7 +72,7 @@ public class Level2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try{
-                    Intent intent = new Intent(Level2.this,TestLevels.class);
+                    Intent intent = new Intent(Level3.this,TestLevels.class);
                     startActivity(intent);finish();
                 }catch (Exception e) {
                 }
@@ -105,7 +104,7 @@ public class Level2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try{
-                    Intent intent = new Intent(Level2.this,TestLevels.class);
+                    Intent intent = new Intent(Level3.this,TestLevels.class);
                     startActivity(intent);finish();
                 }catch (Exception e) {
                 }
@@ -118,7 +117,7 @@ public class Level2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try{
-                    Intent intent = new Intent(Level2.this,Level3.class);
+                    Intent intent = new Intent(Level3.this, Level4.class);
                     startActivity(intent);finish();
                 }catch (Exception e) {
                 }
@@ -144,7 +143,7 @@ public class Level2 extends AppCompatActivity {
                 R.id.point10,
         };
 
-        final Animation a = AnimationUtils.loadAnimation(Level2.this,R.anim.alpha);
+        final Animation a = AnimationUtils.loadAnimation(Level3.this,R.anim.alpha);
 
         numLeft = random.nextInt(10);
         img_left.setImageResource(array.images2[numLeft]);
@@ -320,7 +319,7 @@ public class Level2 extends AppCompatActivity {
 
     public void onBackPressed(){
         try{
-            Intent intent = new Intent(Level2.this,TestLevels.class);
+            Intent intent = new Intent(Level3.this,TestLevels.class);
             startActivity(intent);finish();
         }catch (Exception e) {
         }

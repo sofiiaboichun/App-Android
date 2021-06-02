@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="levelone">Оберіть тільки Знаки пріоритету!</string>
-    <string name="leveloneEnd">"Ви пройшли цей рівень! Вітаємо!!!</string>
+    <string name="leveltwo">Оберіть тимчасові Знаки, які встановлюються на період, необхідний для виконання відповідних робіт на дорозі.</string>
+    <string name="leveloneEnd">Ви пройшли цей рівень! Вітаємо!!!</string>
 </resources>

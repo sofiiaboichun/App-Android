@@ -31,4 +31,33 @@ public class Array {
     final int[] strong={
             1,0,1,0,1,0,1,0,1,0,
     };
+
+    final int[] images2={
+            R.drawable.t1,
+            R.drawable.nonprior1,
+            R.drawable.t2,
+            R.drawable.nonprior2,
+            R.drawable.t3,
+            R.drawable.nonprior3,
+            R.drawable.t4,
+            R.drawable.nonprior4,
+            R.drawable.t5,
+            R.drawable.nonprior5,
+    };
+
+    final int[] texts2={
+            R.string.lvl1text11,
+            R.string.lvl1text2,
+            R.string.lvl1text22,
+            R.string.lvl1text4,
+            R.string.lvl1text33,
+            R.string.lvl1text6,
+            R.string.lvl1text44,
+            R.string.lvl1text8,
+            R.string.lvl1text55,
+            R.string.lvl1text10,
+    };
+
 }
+
+

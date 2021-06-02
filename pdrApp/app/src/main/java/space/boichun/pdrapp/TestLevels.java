@@ -44,6 +44,42 @@ public class TestLevels extends AppCompatActivity {
             }
         });
 
+        TextView textView2 = (TextView)findViewById(R.id.textView2);
+        textView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try{
+                    Intent intent = new Intent(TestLevels.this,Level2.class);
+                    startActivity(intent);finish();
+                }catch (Exception e) {
+                }
+            }
+        });
+
+        TextView textView3 = (TextView)findViewById(R.id.textView3);
+        textView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try{
+                    Intent intent = new Intent(TestLevels.this,Level3.class);
+                    startActivity(intent);finish();
+                }catch (Exception e) {
+                }
+            }
+        });
+
+        TextView textView4 = (TextView)findViewById(R.id.textView4);
+        textView4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try{
+                    Intent intent = new Intent(TestLevels.this,Level4.class);
+                    startActivity(intent);finish();
+                }catch (Exception e) {
+                }
+            }
+        });
+
     }
 
     public void onBackPressed(){

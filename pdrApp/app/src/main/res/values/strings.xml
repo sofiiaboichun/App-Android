@@ -12,5 +12,9 @@
     <string name="info1">Більше</string>
     <string name="level">Рівень :</string>
     <string name="level01">Рівень 1</string>
+    <string name="level02">Рівень 2</string>
+    <string name="level03">Рівень 3</string>
+    <string name="level04">Рівень 4</string>
     <string name="cont">Почати</string>
+    <string name="cont1">Далі</string>
 </resources>

@@ -197,6 +197,84 @@ public class Level1 extends AppCompatActivity {
             }
         });
 
+        img_right.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (event.getAction()==MotionEvent.ACTION_DOWN){
+                    img_left.setEnabled(false);
+                    if (numLeft<numRight){
+                        img_right.setImageResource(R.drawable.img_true);
+                    }else{
+                        img_right.setImageResource(R.drawable.img_false);
+                    }
+                }else if (event.getAction()==MotionEvent.ACTION_UP){
+
+                    if (numLeft<numRight){
+
+                        if (count<10){
+                            count=count+1;
+                        }
+
+                        for (int i=0;i<10;i++){
+                            TextView tv = findViewById(progress[i]);
+                            tv.setBackgroundResource(R.drawable.style_points);
+                        }
+
+                        for (int i=0;i<count;i++){
+                            TextView tv = findViewById(progress[i]);
+                            tv.setBackgroundResource(R.drawable.style_points_green);
+                        }
+
+                    }else{
+
+                        if (count>0){
+                            if (count==1){
+                                count=0;
+                            }else{
+                                count=count-1;
+                            }
+                        }
+
+                        for (int i=0;i<9;i++){
+                            TextView tv = findViewById(progress[i]);
+                            tv.setBackgroundResource(R.drawable.style_points);
+                        }
+
+                        for (int i=0;i<count;i++){
+                            TextView tv = findViewById(progress[i]);
+                            tv.setBackgroundResource(R.drawable.style_points_green);
+                        }
+
+                    }
+
+                    if (count==10){
+
+                    }else{
+                        numLeft = random.nextInt(10);
+                        img_left.setImageResource(array.images1[numLeft]);
+                        img_left.startAnimation(a);
+                        text_left.setText(array.texts1[numLeft]);
+
+                        numRight = random.nextInt(10);
+
+                        while (array.strong[numLeft]==array.strong[numRight]){
+                            numRight=random.nextInt(10);
+                        }
+
+                        img_right.setImageResource(array.images1[numRight]);
+                        img_right.startAnimation(a);
+                        text_right.setText(array.texts1[numRight]);
+
+                        img_left.setEnabled(true);
+                    }
+
+                }
+
+                return true;
+            }
+        });
+
 
     }
 

@@ -28,7 +28,7 @@
 Технології:
 ---
 ### Back-end, мобільні технології:
-<li> Kotlin
+<li> Java
 <li> Android ver. 5.0+
 
 ### DB:
